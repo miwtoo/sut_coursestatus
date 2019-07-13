@@ -16,7 +16,10 @@ namespace sut_coursestatus
             Console.Write("Term : ");
             string term = Console.ReadLine();
 
-            string[] text = File.ReadAllLines(@"D:\Users\Documents\GitHub\sut_coursestatus\course.txt", Encoding.UTF8);
+            Console.Write("File Location: ");
+            string file = Console.ReadLine();
+
+            string[] text = File.ReadAllLines(@file, Encoding.UTF8);
             foreach(string t in text)
             {
                 GetCourseStatus(year, term, t);
